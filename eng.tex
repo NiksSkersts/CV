@@ -1,0 +1,218 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% and Jake Gutierrez's version of it
+% at https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% inspired by https://practicaltypography.com/resumes.html
+% License : MIT
+%------------------------
+
+\documentclass[a4paper]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin = 0.5in]{geometry}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+%--------------UNDERLINING---------------
+% taken from https://alexwlchan.net/2017/10/latex-underlines/
+
+\usepackage{contour}
+\usepackage{ulem}
+
+\renewcommand{\ULdepth}{3.8pt}
+\contourlength{0.8pt}
+
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+%----------------------------------------
+
+%\graphicspath{ {./Images/} }
+
+%----------FONT OPTIONS----------
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+\setmainfont[ExternalLocation=Fonts/]{Junicode.ttf}%
+  [Ligatures=TeX,
+  BoldFont=Junicode-Bold.ttf,
+  ItalicFont=Junicode-Italic.ttf,
+  BoldItalicFont=Junicode-BoldItalic.ttf]
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\iffalse
+% \iftrue
+\addtolength{\oddsidemargin}{0.3in}
+\addtolength{\marginparsep}{0.3in}
+\addtolength{\evensidemargin}{0.3in}
+\addtolength{\textwidth}{-0.5in}
+\addtolength{\topmargin}{0.3in}
+\addtolength{\textheight}{0.3in}
+\fi
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    {\color{gray}\titlerule} \vspace{-5pt}
+    \vspace{8pt}\scshape\raggedright\large
+}{}{0pt}{}
+
+%-------------------------
+% Custom commands
+\newcommand{\BlueHref}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+
+\newcommand{\resumeItem}[1]{
+  \item\large{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large #1} & \normalsize #2 \\
+      \textit{\large #3} & \textit{\normalsize #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\large#1} & \textit{\large #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \large#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%----------HEADING----------
+
+{\Huge Niks Skersts}
+\\
+$|$
+\BlueHref{https://www.linkedin.com/in/niks-skersts/}{
+    \faLinkedin
+    \thinspace \thinspace        
+    \myuline{niks-skersts}} $|$
+\BlueHref{https://github.com/NiksSkersts}{
+    \faGithub
+    \thinspace \thinspace
+    \myuline{NiksSkersts}} $|$
+\BlueHref{mailto:cv@nikssk.id.lv}{
+    \faEnvelope
+    \thinspace \thinspace
+    \myuline{cv@nikssk.id.lv}} $|$
+
+%-----------EDUCATION-----------
+% Samainīt vietām vietu un datumu, lai būtu vienots formāts visā CV
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Latvia University of Life Sciences and Technologies}{2019 -- 2023}
+      {Bachelor Degree of Engineering in Computer Control and Computer Science}{Jelgava, Latvia}
+    \resumeItemListStart
+     \resumeItem{
+     Bachelor Thesis: "IPv6 ieviešana Latvijas Biozinātņu un tehnoloģiju universitātē".\\ 
+     ENG: Deployment of IPv6 protocol at Latvia University of Life Sciences and Technologies.
+     }
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {IT Manager}{June 2024 -- Present }
+      {SIA TBMarine Shipmanagement (Riga)}{Riga, Latvia}
+      \resumeItemListStart
+        \resumeItem{Maintenance of Ansible, Zabbix, Docker, and and various Docker software containers.}
+        \resumeItem{Responsible for disaster recovery system setup, maintenance, and monitoring.}
+        \resumeItem{Upkeep of Linux server and Windows environment.}
+        \resumeItem{Windows and Linux support for end-users at shore and at sea.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {Service Engineer}{October 2021 -- June 2024  }
+      {Latvia University of Life Sciences and Technologies}{Jelgava, Latvia}
+      \resumeItemListStart
+        \resumeItem{Duties include upkeep of Windows workstations, GNU/Linux servers, software, and its licensing, printers, copiers, and work with OSI L1, L2 networking.}
+        \resumeItem{End-user support in Windows environment.}
+      \resumeItemListEnd
+    \resumeSubHeadingListEnd
+      
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \large{\item{
+     \textbf{Languages}{: Latvian - native, English - B2.}\\
+     \textbf{Basic knowledge at}{:}
+     \resumeItemListStart
+        \resumeItem{C\#, Python, PLSQL, HTML/CSS, BASH, and Powershell. I am not much of a programmer, but I can write a script to get the job done.}
+        \resumeItem{Various tools like Putty, Tabby.sh, Wireshark, NMAP, Clonezilla, and IPerf. List is always growing as time goes. Tools come and go.}
+     \resumeItemListEnd
+     \textbf{Good knowledge at}{:}
+     \resumeItemListStart
+        \resumeItem{Administering and troubleshooting Windows OS and GNU/Linux OS (mainly Debian and Debian based systems like Proxmox).}
+        \resumeItem{Ansible for automating system upkeep and configuration. Recently moved from CLI to using \BlueHref{https://semaphoreui.com/}{\myuline{SemaphoreUI}} as frontend. }
+        \resumeItem{Docker container deployment and upkeep. A lot of is now being done using Ansible.}
+        \resumeItem{Deployment and upkeep of physical infrastructure - servers and networking. }
+     \resumeItemListEnd
+     \textbf{Great knowledge at}{: This section is left intentionally blank. Working at SMBs comes with an disadvantage of being jack of all trades, master of none. \newline However, I can use Google, so that's great. }\\
+     \textbf{Lack of knowledge at}{: Windows AD (I am dealing with device, user, app management on Intunes, but lack knowledge on more advanced topics). }
+     }}
+ \end{itemize}
+ 
+\section{Interests \& Goals}
+\large{Major Thanks goes to the folk from whom I am able to learn and keep myself updated:}
+\resumeItemListStart
+\resumeItem{\textbf{Podcasts:} \BlueHref{https://latenightlinux.com/}{Late Night Linux Family}, \BlueHref{https://blog.apnic.net/ping-podcast/}{PING by APNIC}, \BlueHref{https://labs.ripe.net/category/podcasts/}{The RIPE Labs Podcast by RIPE}, \BlueHref{https://enterpriselinuxsecurity.show/}{Enterprise Linux Security}, \BlueHref{https://packetpushers.net/}{Packet Pushers}}
+\resumeItem{\textbf{General:} \BlueHref{https://www.jeffgeerling.com/}{Jeff Geerling} for Ansible, \BlueHref{https://klarasystems.com/}{Klara Systems} mainly for dealing with ZFS and server administration. }
+\resumeItem{\textbf{Fun:} \BlueHref{https://tuxdigital.com/}{TuxDigital Network}, \BlueHref{https://www.jupiterbroadcasting.com/}{Jupiter Broadcasting}, \BlueHref{https://twit.tv/}{TWiT}}
+\resumeItemListEnd
+\begin{flushright}
+    \small{(This CV is open source at \BlueHref{https://github.com/NiksSkersts/CV}{Github}).}
+\end{flushright}
+
+
+%-------------------------------------------
+\end{document}
